@@ -1,6 +1,9 @@
 import pandas as pd
 import datetime
 
+
+#Getting the data
+
 def fetch_page(sex, page_number):
     BASE_URL = "https://www.worldathletics.org/world-rankings/overall-ranking/" + sex + "?regionType=world&page=" + page_number + "&rankDate=2023-01-10&limitByCountry=0"
     url = BASE_URL
@@ -27,15 +30,19 @@ males = get_data("men", page_numbers)
 females = get_data("female", page_numbers)
 
 
+#Data preperation
+
 sexm = 1000*["M"]
 sexf = 1000*["F"]
 
+# Add a sex column to competititors
 males["Sex"] = sexm
 females["Sex"] = sexf
 
 all_athletes = pd.concat([males, females]).drop(["Place"],  axis="columns")
 all_athletes = all_athletes.rename(columns={"Event List": "Discipline"})
 
+#convert birth date from string to date
 try:
     all_athletes["DOB"] = pd.to_datetime(all_athletes["DOB"], dayfirst=True, utc=False)
 
@@ -48,6 +55,8 @@ except Exception as ex:
 else:
     ("dates converted")
 
+
+# added a column to distinguish whether athlete is a junior or not.
 
 cut_off_date = datetime.datetime(2003, 1, 1)
 
