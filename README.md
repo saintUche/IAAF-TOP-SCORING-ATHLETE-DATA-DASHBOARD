@@ -45,6 +45,8 @@ The visualisations were carried out in powerBI
 
 ## Findings 
 
+![image](https://user-images.githubusercontent.com/79328765/214068903-86fa9853-4b43-4977-bedb-36119c1e9dd1.png)
+
 
 
 From the visualisation we can conclude:
