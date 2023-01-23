@@ -11,4 +11,54 @@ I wanted to see how different countries produced top scoring athletes from the 2
 https://www.worldathletics.org/world-ranking-rules/basics
 
 
-#### Getting the data
+## Data Pipeline
+
+Web -> Python -> SQL -> PowerBI
+ 
+### Getting the data 
+
+(scrapper.py)
+
+I created a web scraper using pandas function 'read_html'. 
+The base URL was found allowing to get the data across the different tables by changing the URL where necessary.
+
+
+### Data preparation/manipulation
+
+(scrapper.py)
+
+I removed and added new data column(s) where necessary.  
+I also made sure the column values were in their necessary data types.
+
+(rankingsSchema.sql)
+
+Here more tables were creaated based off of other column values.
+
+(webDataToSQL.py)
+
+Here data was manipulation so that information based off countries could be obtained.
+
+### Data visualisations 
+
+The visualisations were carried out in powerBI
+
+
+## Findings 
+
+
+
+From the visualisation we can conclude:
+
+- USA was the most successful country
+- The number of athletes is very closesly related to the country score
+- The number of events a country competes in is cloesly related to country score
+- Most top scoring athletes are senior athlets 
+- Kenya has the highes scoring juniors 
+
+
+
+
+
+
+
+
