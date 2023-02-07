@@ -54,8 +54,8 @@ From the visualisation we can conclude:
 - USA was the most successful country
 - The number of athletes is very closesly related to the country score
 - The number of events a country competes in is cloesly related to country score
-- Most top scoring athletes are senior athlets 
-- Kenya has the highes scoring juniors 
+- Most top scoring athletes are senior athletes 
+- Kenya has the highest scoring juniors 
 
 
 
